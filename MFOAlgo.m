@@ -12,7 +12,7 @@ while iteration<T+1
         forub=M(i,:)>ub;
         forlb=M(i,:)<lb;
         M(i,:)=(M(i,:).*(~(forub+forlb)))+ub.*forub+lb.*forlb;
-        OM(1,i) = minor1(M(i,:));
+        OM(1,i) = DFOD(M(i,:));
     end
      if iteration==1
         [OMS I]=sort(OM);
